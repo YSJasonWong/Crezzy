@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rent your car</title>
+<link href="https://fonts.googleapis.com/css?family=Poiret+One|Righteous&display=swap" rel="stylesheet">
+	<style>
+		body{
+			color: white;
+   			font-family: 'Poiret One', cursive;
+   			background:darkorchid;
+    		background-size: auto;
+    		background-size:cover;
+		}
+		li a{
+    		display: block;
+    		color: white;
+    		text-align: center;
+    		padding: 14px 16px;
+    		text-decoration: none;
+		}
+    	li a:hover:not(.active) {
+    		color: #3F005F;
+    		background-color: white;
+		}
+		.active {
+    		background-color:#551B71;
+		}	
+	</style>
+</head>
+
+<body>
+	<nav style="font-family: 'Righteous',cursive;background: url(image/glow-elegance-luxury-purple-backgrounds-horizontal-wallpaper-michal-steflovic.jpg)no-repeat;background-size: 100%; top: 0px;left:0px;position:fixed;width:100%;">
+		<a href="profile.html" style="float:right;margin-right:20px;margin-top:10px;"><img src="image/profile Icon.png" width="50" alt="Profile"/></a>
+	    <a href="index.html" style="color:white;text-align:center;font-size:20px;text-decoration:none;"><h1><i>CREZZY</i></h1></a>
+	    <ul style="list-style-type:none;overflow:hidden;background-color:#3F005F;">
+  			<li style="float:right;"><a href="about.html" title="Know more about our company">About Us</a></li>
+			<li style="float:right;"><a href="promotion.html" title="Check out the latest discounts">Promotion</a></li>
+			<li style="float:right;"><a href="list.html" title="Cars of different brands are available">Car List</a></li>
+  			<li style="float:right;"><a class="active" href="booking.html" title="Click to rent a car">Car Rental</a></li>  			
+			<li style="float:right;"><a href="index.html">Home</a></li>
+        </ul>
+	</nav>
+	
+	<p style="margin-top:200px;"><h1 style="text-align:center;">Please fill in the following information to finish the ordering.</h1></p>
+	
+	<p>
+		<form  method="post" action="booking.php" style="text-align:center;background:#551B71;padding:30px;margin:30px;margin-bottom:130px;border-radius: 50px;" autocomplete="on">
+			<fieldset>
+				<legend style="color:white;"><h2 style="text-align:center;"><em>  Personal information:  </em></h2></legend>
+			First Name:  <input type="text" name="firstname" placeholder="First Name" autofocus required><br><br>
+			Last Name:  <input type="text" name="lastname" placeholder="Last Name" autofocus required><br><br>
+			Gender:<label><input type="radio" name="Gender" value="Male" id="Gender_0" autofocus required>Male</label>
+			  <label><input type="radio" name="Gender" value="Female" id="Gender_1" autofocus required>Female</label><br><br>
+			Age:<input type="number" name="age" min="18" placeholder="Must be above 18" autofocus required><br><br>
+			Date of birth:  <input type="date" name="dateOfBirth" autofocus required><br><br>
+			Tel. No.:  <input type="tel" name="tel" placeholder="+852 " maxlength="13" autofocus required><br><br>
+			Email:  <input type="email" name="email" size="50" autofocus required><br><br>
+			</fieldset>
+			<fieldset>
+				<legend style="color:white;"><h2 style="text-align:center;"><em>  Ordering Detail:  </em></h2></legend>
+			Picking up:  <input list="pickupregion" name="pickupregion" size="40" autofocus required><br><br>
+				<datalist id="pickupregion">					
+  					<option value="30 Shing Tai Road, Chai Wan">Hong Kong</option>
+					<option value="6 Oi Kwan Road, Wan Chai">Hong Kong</option>
+					<option value="702 Lai Chi Kok Road, Cheung Sha Wan">Kowloon</option>
+					<option value="25 Hiu Ming Street, Kwun Tong">Kowloon</option>
+					<option value="20 Hing Shing Road, Kwai Chung">New Territories</option>
+					<option value="3 King Ling Road, Tseung Kwan O">New Territories</option>
+					<option value="21 Yuen Wo Road, Sha Tin">New Territories</option>
+					<option value="20 Tsing Yi Road, Tsing Yi Island">New Territories</option>
+					<option value="18 Tsing Wun Road, Tuen Mun">New Territories</option>
+				</datalist>
+			Pick-up Date:  <input type="date" name="pickuptime" required autofocus>
+			Pick-up time:  
+			<select name="pickuptime" required autofocus>
+				<option value="">-</option>
+				<option value="0000">12:00 am</option>
+				<option value="0030">12:30 am</option>
+				<option value="0100">1:00 am</option>
+				<option value="0130">1:30 am</option>
+				<option value="0200">2:00 am</option>
+				<option value="0230">2:30 am</option>
+				<option value="0300">3:00 am</option>
+				<option value="0330">3:30 am</option>
+				<option value="0400">4:00 am</option>
+				<option value="0430">4:30 am</option>
+				<option value="0500">5:00 am</option>
+				<option value="0530">5:30 am</option>
+				<option value="0600">6:00 am</option>
+				<option value="0630">6:30 am</option>
+				<option value="0700">7:00 am</option>
+				<option value="0730">7:30 am</option>
+				<option value="0800">8:00 am</option>
+				<option value="0830">8:30 am</option>
+				<option value="0900">9:00 am</option>
+				<option value="0930">9:30 am</option>
+				<option value="1000">10:00 am</option>
+				<option value="1030">10:30 am</option>
+				<option value="1100">11:00 am</option>
+				<option value="1130">11:30 am</option>
+				<option value="1200">12:00 pm</option>
+				<option value="1230">12:30 pm</option>
+				<option value="1300">1:00 pm</option>
+				<option value="1330">1:30 pm</option>
+				<option value="1400">2:00 pm</option>
+				<option value="1430">2:30 pm</option>
+				<option value="1500">3:00 pm</option>
+				<option value="1530">3:30 pm</option>
+				<option value="1600">4:00 pm</option>
+				<option value="1630">4:30 pm</option>
+				<option value="1700">5:00 pm</option>
+				<option value="1730">5:30 pm</option>
+				<option value="1800">6:00 pm</option>
+				<option value="1830">6:30 pm</option>
+				<option value="1900">7:00 pm</option>
+				<option value="1930">7:30 pm</option>
+				<option value="2000">8:00 pm</option>
+				<option value="2030">8:30 pm</option>
+				<option value="2100">9:00 pm</option>
+				<option value="2130">9:30 pm</option>
+				<option value="2200">10:00 pm</option>
+				<option value="2230">10:30 pm</option>
+				<option value="2300">11:00 pm</option>
+				<option value="2330">11:30 pm</option>
+			</select><br><br>
+			Dropping off:  <input list="dropoffregion" name="dropoffregion" size="40" autofocus required><br><br>
+				<datalist id="dropoffregion">
+					<option value="Same as pick-up"></option>
+					<option value="30 Shing Tai Road, Chai Wan">Hong Kong</option>
+					<option value="6 Oi Kwan Road, Wan Chai">Hong Kong</option>
+					<option value="702 Lai Chi Kok Road, Cheung Sha Wan">Kowloon</option>
+					<option value="25 Hiu Ming Street, Kwun Tong">Kowloon</option>
+					<option value="20 Hing Shing Road, Kwai Chung">New Territories</option>
+					<option value="3 King Ling Road, Tseung Kwan O">New Territories</option>
+					<option value="21 Yuen Wo Road, Sha Tin">New Territories</option>
+					<option value="20 Tsing Yi Road, Tsing Yi Island">New Territories</option>
+					<option value="18 Tsing Wun Road, Tuen Mun">New Territories</option>
+				</datalist>
+			Drop-off Date:  <input type="date" name="dropoffdate" required autofocus>
+			Drop-off time:  
+			<select name="dropofftime" required autofocus>
+				<option value="">-</option>
+				<option value="0000">12:00 am</option>
+				<option value="0030">12:30 am</option>
+				<option value="0100">1:00 am</option>
+				<option value="0130">1:30 am</option>
+				<option value="0200">2:00 am</option>
+				<option value="0230">2:30 am</option>
+				<option value="0300">3:00 am</option>
+				<option value="0330">3:30 am</option>
+				<option value="0400">4:00 am</option>
+				<option value="0430">4:30 am</option>
+				<option value="0500">5:00 am</option>
+				<option value="0530">5:30 am</option>
+				<option value="0600">6:00 am</option>
+				<option value="0630">6:30 am</option>
+				<option value="0700">7:00 am</option>
+				<option value="0730">7:30 am</option>
+				<option value="0800">8:00 am</option>
+				<option value="0830">8:30 am</option>
+				<option value="0900">9:00 am</option>
+				<option value="0930">9:30 am</option>
+				<option value="1000">10:00 am</option>
+				<option value="1030">10:30 am</option>
+				<option value="1100">11:00 am</option>
+				<option value="1130">11:30 am</option>
+				<option value="1200">12:00 pm</option>
+				<option value="1230">12:30 pm</option>
+				<option value="1300">1:00 pm</option>
+				<option value="1330">1:30 pm</option>
+				<option value="1400">2:00 pm</option>
+				<option value="1430">2:30 pm</option>
+				<option value="1500">3:00 pm</option>
+				<option value="1530">3:30 pm</option>
+				<option value="1600">4:00 pm</option>
+				<option value="1630">4:30 pm</option>
+				<option value="1700">5:00 pm</option>
+				<option value="1730">5:30 pm</option>
+				<option value="1800">6:00 pm</option>
+				<option value="1830">6:30 pm</option>
+				<option value="1900">7:00 pm</option>
+				<option value="1930">7:30 pm</option>
+				<option value="2000">8:00 pm</option>
+				<option value="2030">8:30 pm</option>
+				<option value="2100">9:00 pm</option>
+				<option value="2130">9:30 pm</option>
+				<option value="2200">10:00 pm</option>
+				<option value="2230">10:30 pm</option>
+				<option value="2300">11:00 pm</option>
+				<option value="2330">11:30 pm</option>
+			</select><br><br>			
+			Select the vehicle you want to rent:  
+				<select name="vehicle" required autofocus>
+					<option value="">-</option>
+					<option value="HONDA FREED">Honda Freed</option>
+					<option value="PROTON EXORA">Proton Exora</option>
+					<option value="TOYOTA ALPHARD">Toyota Alphard</option>
+					<option value="TOYOTA NOAH">Toyota Noah</option>
+					<option value="TOYOTA SIENTA">Toyota Sienta</option>
+					<option value="TOYOTA VELLFIRE">Toyota Vellfire</option>
+					<option value="BMW X2">BMW X2</option>
+					<option value="BMW X3">BMW X3</option>
+					<option value="BMW X4">BMW X4</option>
+					<option value="BMW X5">BMW X5</option>
+					<option value="BMW X7">BMW X7</option>
+					<option value="HONDA VEZEL">Honda Vezel</option>
+					<option value="BMW 1 SERIES">BMW 1 series</option>
+					<option value="BMW 3 SERIES">BMW 3 series</option>
+					<option value="BMW 4 SERIES">BMW 4 series</option>
+					<option value="BMW 5 SERIES">BMW 5 series</option>
+					<option value="BMW 6 SERIES">BMW 6 series</option>
+					<option value="BMW 7 SERIES">BMW 7 series</option>
+					<option value="HONDA JAZZ">Honda Jazz</option>
+					<option value="SMART FORTWO">Smart Fortwo</option>
+					<option value="BMW THE 8">BMW The 8</option>
+					<option value="LAMBORGHINI AVENTADOR S">Lamborghini Aventador S</option>
+					<option value="LAMBORGHINI HURACAN PERFORMANTE">Lamborghini Huracan Performante</option>
+					<option value="LAMBORGHINI HURACAN RWD">Lamborghini Huracan Rwd</option>
+					<option value="MCLAREN 540 C">Mclaren 540 C</option>
+					<option value="MCLAREN 570 GT">Mclaren 570 GT</option>
+					<option value="MCLAREN 570 S">Mclaren 570 S</option>
+					<option value="MCLAREN 600 LT">Mclaren 600 LT</option>
+					<option value="MCLAREN 720 S">Mclaren 720 S</option>
+					<option value="YAMAHA CUXI">Yamaha Cuxi</option>
+					<option value="YAMAHA FORCE">Yamaha Force</option>
+					<option value="YAMAHA LIMI">Yamaha Limi</option>
+					<option value="YAMAHA RS NEO">Yamaha RS NEO</option>
+					<option value="YAMAHA RZF-R3">Yamaha RZF-R3</option>
+					<option value="YAMAHA SMAX">Yamaha Smax</option>
+					<option value="YAMAHA TRICITY">Yamaha Tricity</option>
+					<option value="YAMAHA XMAX">Yamaha Xmax</option>
+				</select><br><br>
+			Discount Code:  <input type="text" name="discountcode" placeholder="If any" autofocus><br><br>
+			</fieldset><br>
+			<input type="checkbox" name="agreement" autofocus required>  You have read and agree our <a href="term.html" style="color: lightgray;" title="CREZZY - Term of use" target="_blank">term of use</a> and <a href="policy.html" style="color: lightgray;" title="CREZZY - Privacy Policy" target="_blank">Privacy Policy</a>.<br><br>
+			<input type="submit" autofocus> <input type="reset" autofocus>
+		</form>
+	</p>
+	
+    <footer style="font-family:'Poiret One',cursive;color:white;background-color:#3F005F;position:fixed; bottom:0px;left:0px;margin:auto;width:100%;height:90px;padding-top:10px">
+		<a href="term.html" title="Term of use" style="color:white;font-size:14pt;text-decoration:none;margin-left: 50px;">Term of use</a><br>
+		<a href="policy.html" title="Privacy Policy" style="color:white;font-size:14pt;text-decoration:none;margin-left: 50px;">Privacy Policy</a>
+		<a href="help.html" title="Need Help? Visit Our Help Center" style="right:10px;color:white;font-size:14pt;text-decoration:none;text-align:center;float:right;margin-right:20px;">Help Center</a><br><hr>
+		<small style="margin-left: 50px;">CREZZY, Inc. is not responsible for content on external Web sites. © 2019 CREZZY, Inc. All rights reserved.</small>
+	</footer>
+</body>
+</html>
